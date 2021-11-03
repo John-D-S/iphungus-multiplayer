@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RTAC/01_Scenes/Offline Scene.unity
+    guid: 3ff65af2e6599dd4aaceede7e03bccf8
+  - enabled: 1
+    path: Assets/RTAC/01_Scenes/TestLevel.unity
+    guid: 8175dbc49bbfcd7458ce6cb72e4bec70
   m_configObjects: {}

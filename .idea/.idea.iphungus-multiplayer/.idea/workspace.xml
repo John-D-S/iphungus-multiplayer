@@ -4,9 +4,9 @@
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/ExplosionMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/ExplosionMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636500576382</updated>
-      <workItem from="1636500595907" duration="23186000" />
+      <workItem from="1636500595907" duration="27388000" />
     </task>
     <servers />
   </component>

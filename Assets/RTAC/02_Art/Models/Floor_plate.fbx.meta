@@ -3,7 +3,22 @@ guid: bdec01ffe8bf3f04abfcc9fd8717c3de
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorCenter
+    second: {fileID: 2100000, guid: eb2f2b9477999174eb62b6644f4e9c21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor_Border
+    second: {fileID: 2100000, guid: 653460510500ddf419b16c0dfb634a9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 83d840230b592224eabf1b427d39b3bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

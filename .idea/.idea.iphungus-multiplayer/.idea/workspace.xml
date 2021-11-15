@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/ExplosionMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/ExplosionMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/FlameThrower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/FlameThrower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Landmine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Landmine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LandmineInnerShell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LandmineInnerShell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LandmineOuterShell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LandmineOuterShell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpikeTrigger.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/FlameThrower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Landmine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20hd5za2HOwGebpWtv6QDDpm5nX" />
   <component name="ProjectViewState">
@@ -64,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636500576382</updated>
-      <workItem from="1636500595907" duration="27388000" />
+      <workItem from="1636500595907" duration="34972000" />
     </task>
     <servers />
   </component>

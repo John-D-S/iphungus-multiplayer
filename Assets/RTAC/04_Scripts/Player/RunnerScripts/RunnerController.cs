@@ -88,7 +88,6 @@ public class RunnerController : NetworkBehaviour
         groundNormal = Vector3.up;
     }
     
-    
     void FixedUpdate()
     {
         if (jumpThisFrame && jumpsLeft > 0)

@@ -5,67 +5,108 @@ using UnityEngine;
 
 public class FootFall : MonoBehaviour
 {
-    [SerializeField] private MeshCollider floor;
-    [SerializeField] private Material[] plateMats;
-    private readonly int invisibleDuration = 5;
-    private Color32[] startColours = new Color32[3];
-    private Color32[] endcolours = new Color32[3];
-    [SerializeField] private MeshRenderer rend;
+    [SerializeField] private Collider floor;
+    private Material[] plateMats;
+    [SerializeField] private Material baseMat;
+    private readonly int invisibleDuration = 3;
+    private Color[] startColours = new Color[3];
+    private Color[] endColours = new Color[3];
+    private MeshRenderer rend;
+    private Color[] tempCol = new Color[3];
 
     private void Start()
     {
+        tempCol[0] = new Color(0, 0, 10, 10);
+        tempCol[1] = new Color(3, 3, 3, 10);
+        tempCol[2] = new Color(6, 6, 6, 10);
+        
+        startColours[0] = Color.blue;
+        startColours[1] = new Color(0.3f, 0.3f, 0.3f, 1);
+        startColours[2] = new Color(0.588f, 0.588f, 0.588f, 1);
 
-        startColours[0] = new Color32(150, 150, 150, 255);
-        startColours[1] = new Color32(150, 150, 150, 255);
-        startColours[2] = new Color32(75, 75, 75, 255);
-
-        for (int i = 0; i < endcolours.Length; i++)
+        for (int i = 0; i < tempCol.Length; i++)
         {
-            endcolours[i] = Color.clear;
+            tempCol[i].r /= 255f;
+            tempCol[i].g /= 255f;
+            tempCol[i].b /= 255f;
+            tempCol[i].a /= 255f;
         }
         
+        plateMats = new Material[3];
 
-        for (int i = 0; i < startColours.Length; i++)
+        rend = GetComponent<MeshRenderer>();
+
+        for (int i = 0; i < plateMats.Length; i++)
         {
+            plateMats[i] = new Material(baseMat);
+            endColours[i] = Color.clear;
             plateMats[i].color = startColours[i];
         }
+        rend.materials = plateMats;
     }
-
+    
     public IEnumerator PlateAction()
     {
-        void ChangeColour(Color32[] finalColour)
-        {
-            for (int i = 0; i < plateMats.Length; i++)
-            {
-                plateMats[i].color = Color32.Lerp(plateMats[i].color, finalColour[i], Time.fixedDeltaTime);
-            }
-        }
-
-        while (plateMats[0].color != Color.clear)
-        {
-            ChangeColour(endcolours);
-            yield return new WaitForFixedUpdate();
-
-            if (plateMats[0].color == Color.clear)
-            {
-                yield return null;
-            }
-        }
+        yield return FadePlate(endColours, true);
 
         floor.enabled = false;
         yield return new WaitForSeconds(invisibleDuration);
 
-        while (plateMats[0].color != Color.white)
+        yield return FadePlate(startColours, false);
+    }
+
+    private void ChangeColour(bool down)
+    {
+        if (down)
         {
-            ChangeColour(startColours); 
-            yield return new WaitForFixedUpdate();
-            if (plateMats[0].color == Color.white)
+            for (int i = 0; i < plateMats.Length; i++)
             {
-                yield return null;
+                plateMats[i].color -= tempCol[i];
             }
         }
-        
+        else
+        {
+            for (int i = 0; i < plateMats.Length; i++)
+            {
+                plateMats[i].color += tempCol[i];
+            }
+        }
     }
+
+    private IEnumerator FadePlate(Color[] finalColour, bool down)
+    {
+        if (down)
+        {
+            
+            while (plateMats[0].color.a >= finalColour[0].a)
+            {
+                ChangeColour(down);
+                yield return new WaitForFixedUpdate();
+
+                if (plateMats[0].color.a <= finalColour[0].a)
+                {
+                    yield return null;
+                }
+            }
+        }
+        else
+        {
+            while (plateMats[1].color.b <= finalColour[1].b)
+            {
+                ChangeColour(down);
+                yield return new WaitForFixedUpdate();
+                    
+                Debug.Log(plateMats[1].color.b - finalColour[1].b);
+
+                if (plateMats[1].color.b >= finalColour[1].b)
+                {
+                    yield return null;
+                }
+            }
+        }
+
+    }
+
 }
     
 

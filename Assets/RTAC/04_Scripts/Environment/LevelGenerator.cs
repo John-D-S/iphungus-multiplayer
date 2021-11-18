@@ -98,7 +98,7 @@ public class LevelGenerator : MonoBehaviour
 			}
 			else
 			{
-				LevelSectionType sectionType = tileOrders[tileOrders.Count % noOfIterations];
+				LevelSectionType sectionType = tileOrders[noOfIterations % tileOrders.Count];
 				switch(sectionType)
 				{
 					case LevelSectionType.Normal:
@@ -120,10 +120,15 @@ public class LevelGenerator : MonoBehaviour
 			
 			for(int i = 0; i < shuffledPossibleSections.Count; i++)
 			{
+				Debug.Log(_currentSections.Count);
 				_currentSections.Add(shuffledPossibleSections[i]);
-				if(NoIntersectingSpheres(_currentSections) && TryPlaceSections(ref _currentSections, noOfIterations + 1))
+				Debug.Log($"No Intersecting Spheres: {NoIntersectingSpheres(_currentSections)}");
+				if(NoIntersectingSpheres(_currentSections))
 				{
-					return true;
+					if(TryPlaceSections(ref _currentSections, _targetNoOfIterations))
+					{
+						return true;
+					}
 				}
 				_currentSections.RemoveAt(_currentSections.Count - 1);
 			}
@@ -138,12 +143,15 @@ public class LevelGenerator : MonoBehaviour
 	private void PlaceLevelSectionsOffline()
 	{
 		List<PosRot> allLevelPosRots = LevelSectionPosRots(levelSectionsToPlace);
+		Debug.Log(levelSectionsToPlace.Count);
 		for(int i = 0; i < levelSectionsToPlace.Count; i++)
 		{
 			LevelSection sectionToPlace = levelSectionsToPlace[i];
 			Vector3 position = allLevelPosRots[i].position;
 			Quaternion rotation = allLevelPosRots[i].Rotation;
-			Instantiate(sectionToPlace.gameObject, position, rotation, transform);
+			GameObject gameObjectToInstantiate = sectionToPlace.gameObject;
+			GameObject instantiatedGameObject = Instantiate(gameObjectToInstantiate, position, rotation, transform);
+			Debug.Log(instantiatedGameObject);
 		}
 	}
 	
@@ -152,4 +160,4 @@ public class LevelGenerator : MonoBehaviour
 		CalculateSections();
 		PlaceLevelSectionsOffline();
 	}
-}
+}	

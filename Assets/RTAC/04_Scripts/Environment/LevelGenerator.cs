@@ -1,3 +1,5 @@
+using Mirror;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,7 +34,7 @@ public struct PosRot
 	public static PosRot operator +(PosRot a, PosRot b) => new PosRot(a.position + a.Rotation * b.position, a.yRot + b.yRot);
 }
 
-public class LevelGenerator : MonoBehaviour
+public class LevelGenerator : NetworkBehaviour
 {
 	[SerializeField] private List<StartSection> startSections;
 	[SerializeField] private List<NormalSection> normalSections; 
@@ -168,7 +170,6 @@ public class LevelGenerator : MonoBehaviour
 	private void PlaceLevelSectionsOffline()
 	{
 		List<PosRot> allLevelPosRots = LevelSectionPosRots(levelSectionsToPlace);
-		Debug.Log(levelSectionsToPlace.Count);
 		for(int i = 0; i < levelSectionsToPlace.Count; i++)
 		{
 			LevelSection sectionToPlace = levelSectionsToPlace[i];
@@ -177,6 +178,20 @@ public class LevelGenerator : MonoBehaviour
 			GameObject gameObjectToInstantiate = sectionToPlace.gameObject;
 			GameObject instantiatedGameObject = Instantiate(gameObjectToInstantiate, position, rotation, transform);
 			Debug.Log(instantiatedGameObject);
+		}
+	}
+
+	private void PlaceLevelSectionsOnline()
+	{
+		List<PosRot> allLevelPosRots = LevelSectionPosRots(levelSectionsToPlace);
+		for(int i = 0; i < levelSectionsToPlace.Count; i++)
+		{
+			LevelSection sectionToPlace = levelSectionsToPlace[i];
+			Vector3 position = allLevelPosRots[i].position;
+			Quaternion rotation = allLevelPosRots[i].Rotation;
+			GameObject gameObjectToInstantiate = sectionToPlace.gameObject;
+			GameObject instantiatedGameObject = Instantiate(gameObjectToInstantiate, position, rotation, transform);
+			NetworkServer.Spawn(instantiatedGameObject);
 		}
 	}
 
@@ -202,6 +217,6 @@ public class LevelGenerator : MonoBehaviour
 	private void Start()
 	{
 		CalculateSections();
-		PlaceLevelSectionsOffline();
+		PlaceLevelSectionsOnline();
 	}
 }	

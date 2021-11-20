@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Offline Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Offline Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +29,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="20hd5za2HOwGebpWtv6QDDpm5nX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

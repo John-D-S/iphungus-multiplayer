@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RTAC/01_Scenes/TestLevel.unity
     guid: 8175dbc49bbfcd7458ce6cb72e4bec70
+  - enabled: 1
+    path: Assets/RTAC/01_Scenes/LevelGenTesting.unity
+    guid: 77d3dc6a93faa5d42a40c90d4721d7f9
   m_configObjects: {}

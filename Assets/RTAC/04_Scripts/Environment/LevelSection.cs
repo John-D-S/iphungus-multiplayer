@@ -1,9 +1,12 @@
+using Mirror;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSection : MonoBehaviour
+[RequireComponent(typeof(NetworkIdentity))]
+public class LevelSection : NetworkBehaviour
 {
     [SerializeField] private List<Sphere> localSpheres = new List<Sphere>();
     [SerializeField] private PosRot nextPosRot = new PosRot();

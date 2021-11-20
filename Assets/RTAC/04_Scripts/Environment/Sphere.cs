@@ -14,11 +14,10 @@ public class Sphere
 		radius = _radius;
 	}
 
-	private bool IntersectsWithSphere(Sphere other)
+	public bool IntersectsWithSphere(Sphere other)
 	{
 		if(Vector3.Distance(position, other.position) > radius + other.radius)
 			return true;
 		return false;
 	}
-	
 }

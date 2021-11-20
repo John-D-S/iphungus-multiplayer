@@ -16,7 +16,7 @@ public class Sphere
 
 	public bool IntersectsWithSphere(Sphere other)
 	{
-		if(Vector3.Distance(position, other.position) > radius + other.radius)
+		if(Vector3.Distance(position, other.position) < radius + other.radius)
 			return true;
 		return false;
 	}

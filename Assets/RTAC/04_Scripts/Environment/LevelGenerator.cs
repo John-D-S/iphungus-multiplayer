@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 using UnityEngine;
 
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public enum LevelSectionType
@@ -55,9 +57,27 @@ public class LevelGenerator : MonoBehaviour
 		return returnValue;
 	}
 
+	private List<PosRot> apparentLevelSectionPosRots = new List<PosRot>();
+	private List<Sphere> nonCollidingSpheres = new List<Sphere>();
+	private List<Sphere> collidingSpheres = new List<Sphere>();
 	private bool NoIntersectingSpheres(List<LevelSection> _levelSections)
 	{
+		nonCollidingSpheres.Clear();
+		collidingSpheres.Clear();
+		apparentLevelSectionPosRots.Clear();
 		List<PosRot> levelSectionPosRots = LevelSectionPosRots(_levelSections);
+		apparentLevelSectionPosRots = levelSectionPosRots;
+		/*
+		int i = 0;
+		foreach(LevelSection levelSection in _levelSections)
+		{
+			foreach(Sphere sphere in levelSection.SpheresWhenSectionAtPosRot(levelSectionPosRots[i]))
+			{
+				apparentSpheres.Add(sphere);
+			}
+			i++;
+		}
+		*/
 		int lastSectionIndex = _levelSections.Count - 1;
 		foreach(Sphere sphere in _levelSections[lastSectionIndex].SpheresWhenSectionAtPosRot(levelSectionPosRots[lastSectionIndex]))
 		{
@@ -68,7 +88,12 @@ public class LevelGenerator : MonoBehaviour
 				{
 					if(sphere.IntersectsWithSphere(otherSphere))
 					{
+						collidingSpheres.Add(otherSphere);
 						return false;
+					}
+					else
+					{
+						nonCollidingSpheres.Add(otherSphere);
 					}
 				} 
 			}
@@ -122,9 +147,9 @@ public class LevelGenerator : MonoBehaviour
 			{
 				Debug.Log(_currentSections.Count);
 				_currentSections.Add(shuffledPossibleSections[i]);
-				Debug.Log($"No Intersecting Spheres: {NoIntersectingSpheres(_currentSections)}");
 				if(NoIntersectingSpheres(_currentSections))
 				{
+					Debug.Log($"No Intersecting Spheres");
 					if(TryPlaceSections(ref _currentSections, _targetNoOfIterations))
 					{
 						return true;
@@ -154,7 +179,26 @@ public class LevelGenerator : MonoBehaviour
 			Debug.Log(instantiatedGameObject);
 		}
 	}
-	
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		foreach(PosRot posRot in apparentLevelSectionPosRots)
+		{
+			Gizmos.DrawSphere(posRot.position, 0.25f);
+		}
+		Gizmos.color = Color.green;
+		foreach(Sphere nonCollidingSphere in nonCollidingSpheres)
+		{
+			Gizmos.DrawSphere(nonCollidingSphere.position, nonCollidingSphere.radius);
+		}
+		Gizmos.color = Color.red;
+		foreach(Sphere collidingSphere in collidingSpheres)
+		{
+			Gizmos.DrawSphere(collidingSphere.position, collidingSphere.radius);
+		}
+	}
+
 	private void Start()
 	{
 		CalculateSections();

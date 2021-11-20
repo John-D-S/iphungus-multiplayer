@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Trap Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +16,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAFB29D5-2338-47FB-B4ED-CF8D7C32B1E3/ef/8424323f/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/TempLevelTileData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Shaders/Assets/ShaderProject/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/CheckpointSection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelTile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20hd5za2HOwGebpWtv6QDDpm5nX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

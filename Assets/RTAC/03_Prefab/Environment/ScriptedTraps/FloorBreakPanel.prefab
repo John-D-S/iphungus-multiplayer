@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4744426102808820086}
   - component: {fileID: 8634823184701645618}
   m_Layer: 0
-  m_Name: FloorBreakPanel (1)
+  m_Name: FloorBreakPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,8 +85,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7633320736815074518}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.76, y: 2.66, z: -28.39}
-  m_LocalScale: {x: 0.02389946, y: 0.001855492, z: 0.02389946}
+  m_LocalPosition: {x: 14.05, y: 1, z: 50.7}
+  m_LocalScale: {x: 0.05974865, y: 0.00463873, z: 0.05974865}
   m_Children:
   - {fileID: 8046485984398390920}
   m_Father: {fileID: 0}

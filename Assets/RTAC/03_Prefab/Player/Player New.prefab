@@ -147,10 +147,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  walkingSpeed: 12
-  runningforce: 24
+  walkingSpeed: 20
+  runningforce: 25
   maxJumps: 2
-  jumpForce: 4
+  jumpForce: 5
   dashForce: 5
   turnLerpSpeed: 10
   thirdPerson: 1

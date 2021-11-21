@@ -11,19 +11,25 @@ public class LevelSection : NetworkBehaviour
     [SerializeField] private List<Sphere> localSpheres = new List<Sphere>();
     [SerializeField] private PosRot nextPosRot = new PosRot();
     public PosRot NextPosRot => nextPosRot;
-    
+
+
     /*
-    [SerializeField] private PosRot tempFixedPosRot = new PosRot();
+    [SerializeField] private bool fixScale = false;
+    [SerializeField, HideInInspector] private bool alreadyFixed = false;
 
     private void OnValidate()
     {
-        float oldPosRotX = nextPosRot.position.x;
-        float oldPosRotZ = nextPosRot.position.z;
-        float oldPosRotY = nextPosRot.position.y;
-        Vector3 newPosition = new Vector3(oldPosRotZ, oldPosRotY, -oldPosRotX);
-        tempFixedPosRot = new PosRot(newPosition, nextPosRot.yRot + 90);
+        if(fixScale && !alreadyFixed)
+        {
+            for(int i = 0; i < localSpheres.Count; i++)
+            {
+                localSpheres[i] = new Sphere(localSpheres[i].position * 2.5f, localSpheres[i].radius * 2.5f);
+            }
+            nextPosRot = new PosRot(nextPosRot.position * 2.5f, nextPosRot.yRot);
+            alreadyFixed = true;
+        }
     }
-    */
+    */  
 
     public List<Sphere> SpheresWhenSectionAtPosRot(PosRot _posRot)
     {

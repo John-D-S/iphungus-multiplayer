@@ -795,6 +795,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 3630719719
       objectReference: {fileID: 0}
+    - target: {fileID: 6257246467362863923, guid: 86a8a01f557060540b48cfbdc3539b78, type: 3}
+      propertyPath: sceneId
+      value: 1582683063
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a8a01f557060540b48cfbdc3539b78, type: 3}
 --- !u!1001 &1102833787700279362
@@ -1296,6 +1300,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6510049904580465491, guid: 985e9c4cd739b5643806fb70fc259c34, type: 3}
+      propertyPath: sceneId
+      value: 972919838
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774666159779268545, guid: 985e9c4cd739b5643806fb70fc259c34, type: 3}
+      propertyPath: m_Name
+      value: Spikes
+      objectReference: {fileID: 0}
     - target: {fileID: 8503880711784766552, guid: 985e9c4cd739b5643806fb70fc259c34, type: 3}
       propertyPath: sceneId
       value: 3038759653
@@ -1361,6 +1373,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 449938018
       objectReference: {fileID: 0}
+    - target: {fileID: 7979305361108490680, guid: 1310798db851a4547ab31d91685453ed, type: 3}
+      propertyPath: sceneId
+      value: 3898006389
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1310798db851a4547ab31d91685453ed, type: 3}
 --- !u!1001 &3071796160908650726
@@ -1373,6 +1389,10 @@ PrefabInstance:
     - target: {fileID: 4473356100812339174, guid: cf5773639b0ae7246894a1dd0fcd9b95, type: 3}
       propertyPath: sceneId
       value: 1650357890
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658892749294742329, guid: cf5773639b0ae7246894a1dd0fcd9b95, type: 3}
+      propertyPath: sceneId
+      value: 2463526833
       objectReference: {fileID: 0}
     - target: {fileID: 6620362024327599039, guid: cf5773639b0ae7246894a1dd0fcd9b95, type: 3}
       propertyPath: m_Name
@@ -1695,6 +1715,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950250487864632098}
     m_Modifications:
+    - target: {fileID: 2513413238931524994, guid: d6d48820c98a0d94783b82a341449d26, type: 3}
+      propertyPath: sceneId
+      value: 1197996013
+      objectReference: {fileID: 0}
     - target: {fileID: 3753506029951997219, guid: d6d48820c98a0d94783b82a341449d26, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2152,6 +2176,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950250487864632098}
     m_Modifications:
+    - target: {fileID: 6594233954694782209, guid: e532ed95ab8c59d4f8bab58b4ceca6fc, type: 3}
+      propertyPath: sceneId
+      value: 615295715
+      objectReference: {fileID: 0}
     - target: {fileID: 6718282782867299365, guid: e532ed95ab8c59d4f8bab58b4ceca6fc, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2331,6 +2359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortStraightMine
       objectReference: {fileID: 0}
+    - target: {fileID: 8992186997041479733, guid: aef5200248705f9469bb978bf64cac90, type: 3}
+      propertyPath: sceneId
+      value: 3829637879
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef5200248705f9469bb978bf64cac90, type: 3}
 --- !u!1001 &7365723496800269875
@@ -2343,6 +2375,10 @@ PrefabInstance:
     - target: {fileID: -8513333839086026280, guid: 57f11975ab296ff459396c3f3534d250, type: 3}
       propertyPath: sceneId
       value: 245010396
+      objectReference: {fileID: 0}
+    - target: {fileID: 822188051710760665, guid: 57f11975ab296ff459396c3f3534d250, type: 3}
+      propertyPath: sceneId
+      value: 3925535435
       objectReference: {fileID: 0}
     - target: {fileID: 1062238022036280130, guid: 57f11975ab296ff459396c3f3534d250, type: 3}
       propertyPath: m_Name
@@ -2599,6 +2635,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950250487864632098}
     m_Modifications:
+    - target: {fileID: 337468560105785147, guid: 786956739e411ef46b10167d749c767d, type: 3}
+      propertyPath: sceneId
+      value: 2461191707
+      objectReference: {fileID: 0}
     - target: {fileID: 1199195674671576697, guid: 786956739e411ef46b10167d749c767d, type: 3}
       propertyPath: sceneId
       value: 925612030

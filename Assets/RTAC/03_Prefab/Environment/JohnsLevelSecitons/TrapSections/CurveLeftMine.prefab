@@ -96,16 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4148bbccb3de534d8a336039f1cb1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   localSpheres:
-  - position: {x: -0.16992235, y: 0.49999997, z: 5.9958982}
-    radius: 7
-  - position: {x: -1.7884045, y: 0.5, z: 13.801362}
-    radius: 7
-  - position: {x: -7.2447195, y: 0.49999997, z: 22.116394}
-    radius: 7
+  - position: {x: -0.42480588, y: 1.2499999, z: 14.989746}
+    radius: 17.5
+  - position: {x: -4.471011, y: 1.25, z: 34.503407}
+    radius: 17.5
+  - position: {x: -18.1118, y: 1.2499999, z: 55.290985}
+    radius: 17.5
   nextPosRot:
-    position: {x: -11.421822, y: 0, z: 26.422432}
+    position: {x: -28.554554, y: 0, z: 66.056076}
     yRot: -45
+  fixScale: 1
+  alreadyFixed: 1
 --- !u!64 &5533575155214631140
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -149,15 +153,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7306696431378840206, guid: bc868b049dcc64846ba0774a362f84e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1200008
+      value: -5.3000026
       objectReference: {fileID: 0}
     - target: {fileID: 7306696431378840206, guid: bc868b049dcc64846ba0774a362f84e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5300002
+      value: 1.3250005
       objectReference: {fileID: 0}
     - target: {fileID: 7306696431378840206, guid: bc868b049dcc64846ba0774a362f84e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.5
+      value: 36.25
       objectReference: {fileID: 0}
     - target: {fileID: 7306696431378840206, guid: bc868b049dcc64846ba0774a362f84e1, type: 3}
       propertyPath: m_LocalRotation.w

@@ -95,16 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768bdad2ba4c8dd42810d67e9216483c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   localSpheres:
-  - position: {x: 1.339998, y: 0.4910762, z: 5.783945}
-    radius: 7
-  - position: {x: 2.7, y: 3.27, z: 21.16}
-    radius: 14.26
-  - position: {x: 15.2196, y: 7.989352, z: 10.130439}
-    radius: 7
+  - position: {x: 3.3499951, y: 1.2276905, z: 14.459863}
+    radius: 17.5
+  - position: {x: 6.75, y: 8.175, z: 52.9}
+    radius: 35.65
+  - position: {x: 38.049, y: 19.973381, z: 25.326097}
+    radius: 17.5
   nextPosRot:
-    position: {x: 21.21493, y: 8.002672, z: 9.967221}
+    position: {x: 53.037323, y: 20.00668, z: 24.918053}
     yRot: 90
+  fixScale: 1
+  alreadyFixed: 1
 --- !u!64 &8380917375036428716
 MeshCollider:
   m_ObjectHideFlags: 0

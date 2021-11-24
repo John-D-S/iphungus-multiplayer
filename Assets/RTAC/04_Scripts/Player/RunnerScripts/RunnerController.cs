@@ -51,6 +51,30 @@ public class RunnerController : NetworkBehaviour
     private float timeSinceLeftGround;
     private float timeSinceJump;
 
+    private Vector3 lastCheckpointPosition;
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.CompareTag("Killzone"))
+        {
+            Debug.Log("shouldBeDead");
+            gameObject.transform.position = lastCheckpointPosition;
+        }
+        else if(other.CompareTag("Checkpoint"))
+        {
+            lastCheckpointPosition = other.transform.position;
+        }
+        else if(other.CompareTag("Finish"))
+        {
+            FinishGame();
+        }
+    }
+
+    private void FinishGame()
+    {
+        //nothing yet        
+    }
+    
     //reset the doublejump when making contact with an object
     private void OnCollisionEnter(Collision collision)
     {
@@ -228,5 +252,6 @@ public class RunnerController : NetworkBehaviour
         cameraGameObject = FindObjectOfType<Camera>().gameObject;
         //appearanceManager = GetComponent<AppearanceManager>();
         rigidBody = GetComponent<Rigidbody>();
+        lastCheckpointPosition = transform.position;
     }
 }

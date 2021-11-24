@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2661727327559896393}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 34.72, y: 9.7, z: -36.66407}
-  m_LocalScale: {x: 0.120606884, y: 0.009363607, z: 0.120606884}
+  m_LocalScale: {x: 0.120606884, y: 0.015, z: 0.120606884}
   m_Children:
   - {fileID: 2896152346811685805}
   m_Father: {fileID: 0}
@@ -175,10 +175,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3632164347031389754, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3632164347083633908, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -280,10 +276,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3632164346253787578, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632164347031389754, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632164347083633908, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
@@ -389,10 +381,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3632164347031389754, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3632164347083633908, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -494,10 +482,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3632164346253787578, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632164347031389754, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632164347083633908, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
@@ -614,10 +598,6 @@ PrefabInstance:
     - target: {fileID: 3632164346253787579, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632164347031389754, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632164347083633908, guid: cf38412f804240d4bb64bf0e220ee92f, type: 3}
       propertyPath: playOnAwake

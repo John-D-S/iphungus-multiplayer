@@ -11,9 +11,13 @@ public class Landmine : MonoBehaviour
     [SerializeField] private int activeBrightness = 2;
     [SerializeField] private float flickerTime = 0.5f, fastFlicker = 0.25f;
     [SerializeField] private ParticleSystem[] explosion;
+
+    [SerializeField] private Collider explosionArea;
+    
     public int currentRoutine;
     private void Start()
     {
+        explosionArea.enabled = false;
         proximityLight.color = Color.green;
         StartCoroutine(Stage0());
     }
@@ -49,6 +53,7 @@ public class Landmine : MonoBehaviour
         {
             shrapnel.Play();
         }
+        explosionArea.enabled = true;
         
         proximityLight.intensity = 0;
         yield return new WaitForSeconds(flickerTime);
@@ -56,6 +61,7 @@ public class Landmine : MonoBehaviour
         {
             shrapnel.Stop();
         }
+        explosionArea.enabled = false;
         StartCoroutine(Stage0());
     }
     

@@ -147,11 +147,11 @@ public class LevelGenerator : NetworkBehaviour
 			
 			for(int i = 0; i < shuffledPossibleSections.Count; i++)
 			{
-				Debug.Log(_currentSections.Count);
+				//Debug.Log(_currentSections.Count);
 				_currentSections.Add(shuffledPossibleSections[i]);
 				if(NoIntersectingSpheres(_currentSections))
 				{
-					Debug.Log($"No Intersecting Spheres");
+					//Debug.Log($"No Intersecting Spheres");
 					if(TryPlaceSections(ref _currentSections, _targetNoOfIterations))
 					{
 						return true;

@@ -96,7 +96,7 @@ public class FootFall : MonoBehaviour
                 ChangeColour(down);
                 yield return new WaitForFixedUpdate();
                     
-                Debug.Log(plateMats[1].color.b - finalColour[1].b);
+                //Debug.Log(plateMats[1].color.b - finalColour[1].b);
 
                 if (plateMats[1].color.b >= finalColour[1].b)
                 {

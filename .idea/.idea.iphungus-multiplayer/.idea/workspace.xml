@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Effects/Flame1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Effects/Flame1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/ScriptedTraps/SpikesNBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/ScriptedTraps/SpikesNBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Animations/PlayerCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Animations/PlayerCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Animations/Run Animation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Animations/Run Animation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/PlayerMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Material/PlayerMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Player/Player New.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Player/Player New.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <workItem from="1637534657046" duration="1207000" />
       <workItem from="1637552276454" duration="3672000" />
       <workItem from="1637742069717" duration="3603000" />
-      <workItem from="1637800160949" duration="1558000" />
+      <workItem from="1637800160949" duration="2152000" />
     </task>
     <servers />
   </component>

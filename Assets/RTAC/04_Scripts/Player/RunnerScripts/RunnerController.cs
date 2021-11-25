@@ -149,10 +149,10 @@ public class RunnerController : NetworkBehaviour
         }
         if (dashThisFrame && dashCooldown <= 0)
         {
-            if(animator)
-            {
-                animator.SetTrigger("Dash");
-            }
+            //if(animator)
+            //{
+                //animator.SetTrigger("Dash");
+            //}
             rigidBody.AddForce(cameraGameObject.transform.rotation * (dashForce * Vector3.forward), ForceMode.Impulse);
             dashCooldown = 1f;
         }
@@ -175,7 +175,7 @@ public class RunnerController : NetworkBehaviour
         if(animator)
         {
             animator.SetFloat("MovementSpeed", rigidBody.velocity.magnitude / sprintSpeed);
-            animator.SetBool("Airborne", timeSinceLeftGround > 0.75f || (timeSinceJump < 0.8f && timeSinceLeftGround > 0.01f));
+            //animator.SetBool("E", timeSinceLeftGround > 0.75f || (timeSinceJump < 0.8f && timeSinceLeftGround > 0.01f));
         }
     }
     

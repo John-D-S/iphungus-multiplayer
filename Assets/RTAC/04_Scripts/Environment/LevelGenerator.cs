@@ -214,7 +214,7 @@ public class LevelGenerator : NetworkBehaviour
 		}
 	}
 
-	private void Start()
+	public override void OnStartServer()
 	{
 		CalculateSections();
 		PlaceLevelSectionsOnline();

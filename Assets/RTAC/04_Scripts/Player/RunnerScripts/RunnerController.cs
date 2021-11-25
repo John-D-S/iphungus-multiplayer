@@ -29,8 +29,8 @@ public class RunnerController : NetworkBehaviour
     [SerializeField, Tooltip("what position in relation to the player should the camera be looking at.")] private Vector3 cameraLookPosition = new Vector3(0, 2, 0);
     [SerializeField] private Vector3 firstPersonOffset = new Vector3(0, 1.5f, 0);
 
-    [Header("-- Animation Settings --")]
-    [SerializeField] private Animator animator;
+    [Header("-- Animation Settings --")] 
+    [SerializeField] private NetworkAnimator netAnimator;
     [SerializeField] private float sprintSpeed = 15;
     
     //private AppearanceManager appearanceManager;
@@ -114,68 +114,73 @@ public class RunnerController : NetworkBehaviour
     
     void FixedUpdate()
     {
-        if (jumpThisFrame && jumpsLeft > 0)
+        if(isLocalPlayer)
         {
-            if (timeSinceLeftGround < 0.25f && jumpsLeft == maxJumps)
+            if (jumpThisFrame && jumpsLeft > 0)
             {
-                rigidBody.AddForce(groundNormal.normalized * jumpForce, ForceMode.Impulse);
+                if (timeSinceLeftGround < 0.25f && jumpsLeft == maxJumps)
+                {
+                    rigidBody.AddForce(groundNormal.normalized * jumpForce, ForceMode.Impulse);
+                }
+                if (jumpsLeft == 1)
+                {
+                    rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y * 0.5f, rigidBody.velocity.z);
+                }
+
+                if(netAnimator)
+                {
+                    netAnimator.SetTrigger("Jump");
+                }
+
+                rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                jumpsLeft -= 1;
+                timeSinceJump = 0;
             }
-            if (jumpsLeft == 1)
+            if (timeSinceLeftGround < 10)
             {
-                rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y * 0.5f, rigidBody.velocity.z);
+                timeSinceLeftGround += Time.fixedDeltaTime;
+            }
+
+            if(timeSinceJump < 10)
+            {
+                timeSinceJump += Time.fixedDeltaTime;
             }
             
-            if(animator)
-                animator.SetTrigger("Jump");
 
-            rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            jumpsLeft -= 1;
-            timeSinceJump = 0;
-        }
-        if (timeSinceLeftGround < 10)
-        {
-            timeSinceLeftGround += Time.fixedDeltaTime;
-        }
+            if (dashCooldown > 0)
+            {
+                dashCooldown -= Time.fixedDeltaTime;
+            }
+            if (dashThisFrame && dashCooldown <= 0)
+            {
+                //if(animator)
+                //{
+                    //animator.SetTrigger("Dash");
+                //}
+                rigidBody.AddForce(cameraGameObject.transform.rotation * (dashForce * Vector3.forward), ForceMode.Impulse);
+                dashCooldown = 1f;
+            }
+            jumpThisFrame = false;
+            dashThisFrame = false;
 
-        if(timeSinceJump < 10)
-        {
-            timeSinceJump += Time.fixedDeltaTime;
-        }
-        
+            //sprinting is always on when touching the ground
+            float forceToAdd = (touchingGround * movementVelocity);
 
-        if (dashCooldown > 0)
-        {
-            dashCooldown -= Time.fixedDeltaTime;
-        }
-        if (dashThisFrame && dashCooldown <= 0)
-        {
-            //if(animator)
-            //{
-                //animator.SetTrigger("Dash");
-            //}
-            rigidBody.AddForce(cameraGameObject.transform.rotation * (dashForce * Vector3.forward), ForceMode.Impulse);
-            dashCooldown = 1f;
-        }
-        jumpThisFrame = false;
-        dashThisFrame = false;
+            Vector3 force = movementDireciton * forceToAdd;
 
-        //sprinting is always on when touching the ground
-        float forceToAdd = (touchingGround * movementVelocity);
+            Vector3 travellingDir = rigidBody.velocity;
+            float dumbFriction = touchingGround * ( travellingDir.magnitude);
+            Vector3 dumbFrictionDir = new Vector3(-travellingDir.x, 0, -travellingDir.z).normalized;
+            Vector3 dumbFrictionForce = dumbFriction * dumbFrictionDir;
 
-        Vector3 force = movementDireciton * forceToAdd;
+            rigidBody.AddForce(dumbFrictionForce);
+            rigidBody.AddForce(force);
 
-        Vector3 travellingDir = rigidBody.velocity;
-        float dumbFriction = touchingGround * ( travellingDir.magnitude);
-        Vector3 dumbFrictionDir = new Vector3(-travellingDir.x, 0, -travellingDir.z).normalized;
-        Vector3 dumbFrictionForce = dumbFriction * dumbFrictionDir;
-
-        rigidBody.AddForce(dumbFrictionForce);
-        rigidBody.AddForce(force);
-
-        if(animator)
-        {
-            animator.SetFloat("MovementSpeed", rigidBody.velocity.magnitude / sprintSpeed);
-            //animator.SetBool("E", timeSinceLeftGround > 0.75f || (timeSinceJump < 0.8f && timeSinceLeftGround > 0.01f));
+            if(netAnimator)
+            {
+                netAnimator.animator.SetFloat("MovementSpeed", rigidBody.velocity.magnitude / sprintSpeed);
+                //animator.SetBool("E", timeSinceLeftGround > 0.75f || (timeSinceJump < 0.8f && timeSinceLeftGround > 0.01f));
+            }
         }
     }
     
@@ -256,6 +261,10 @@ public class RunnerController : NetworkBehaviour
         cameraGameObject = FindObjectOfType<Camera>().gameObject;
         //appearanceManager = GetComponent<AppearanceManager>();
         rigidBody = GetComponent<Rigidbody>();
+        if(!isLocalPlayer)
+        {
+            rigidBody.isKinematic = true;
+        }
         lastCheckpointPosition = transform.position;
     }
 }

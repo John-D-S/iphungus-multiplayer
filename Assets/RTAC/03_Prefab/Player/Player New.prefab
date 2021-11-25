@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 1731764962}
   - component: {fileID: 5559125743751470830}
   - component: {fileID: 1731764961}
+  - component: {fileID: 8877323290612617353}
   m_Layer: 0
   m_Name: Player New
   m_TagString: Player
@@ -179,7 +180,7 @@ MonoBehaviour:
   cameraOffset: {x: 0, y: 0, z: -6}
   cameraLookPosition: {x: 0, y: 2, z: 0}
   firstPersonOffset: {x: 0, y: 1.5, z: 0}
-  animator: {fileID: 169615867579780095}
+  netAnimator: {fileID: 8877323290612617353}
   sprintSpeed: 15
 --- !u!114 &1731764961
 MonoBehaviour:
@@ -221,6 +222,22 @@ MonoBehaviour:
     localRotation: {x: 0, y: 0, z: 0, w: 0}
     localScale: {x: 0, y: 0, z: 0}
     movementSpeed: 0
+--- !u!114 &8877323290612617353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022453017182460188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 1
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 169615867579780095}
 --- !u!1001 &1014618435388781844
 PrefabInstance:
   m_ObjectHideFlags: 0

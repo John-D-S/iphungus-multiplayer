@@ -118,7 +118,7 @@ public class LevelGenerator : NetworkBehaviour
 				foreach(StartSection startSection in startSections)
 					possibleSections.Add(startSection);
 			}
-			else if(noOfIterations == _targetNoOfIterations - 1)
+			else if(noOfIterations == _targetNoOfIterations)
 			{
 				foreach(EndSection endSection in endSections)
 					possibleSections.Add(endSection);

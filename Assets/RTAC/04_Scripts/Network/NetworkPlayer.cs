@@ -124,12 +124,12 @@ namespace AltarChase.Networking
 			PlayerController controller = gameObject.GetComponent<PlayerController>();
 			controller.enabled = isLocalPlayer;
 			
-			CustomNetworkManager.AddPlayer(this);
+			//CustomNetworkManager.AddPlayer(this);
 		}
 
 		public override void OnStopClient()
 		{
-			CustomNetworkManager.RemovePlayer(this);
+			//CustomNetworkManager.RemovePlayer(this);
 		}
 
 		// this runs when the server starts... On the server

@@ -42,7 +42,7 @@ public class LevelGenerator : NetworkBehaviour
 	[SerializeField] private List<CheckpointSection> checkpointSections;
 	[SerializeField] private List<EndSection> endSections;
 	[SerializeField] private List<LevelSectionType> tileOrders;
-	[SerializeField] private int numberOfSections = 20;
+	//[SerializeField] private int numberOfSections = 20;
 
 	private List<LevelSection> levelSectionsToPlace;
 
@@ -103,7 +103,7 @@ public class LevelGenerator : NetworkBehaviour
 		return true;
 	}
 	
-	private void CalculateSections()
+	private void CalculateSections(int _numberOfSections)
 	{
 		bool TryPlaceSections(ref List<LevelSection> _currentSections, int _targetNoOfIterations)
 		{
@@ -164,7 +164,7 @@ public class LevelGenerator : NetworkBehaviour
 		}
 
 		levelSectionsToPlace = new List<LevelSection>();
-		TryPlaceSections(ref levelSectionsToPlace, numberOfSections);
+		TryPlaceSections(ref levelSectionsToPlace, _numberOfSections);
 	}
 
 	private void PlaceLevelSectionsOffline()
@@ -214,9 +214,9 @@ public class LevelGenerator : NetworkBehaviour
 		}
 	}
 
-	public override void OnStartServer()
+	public void RegenerateLevel(int _numberOfSections)
 	{
-		CalculateSections();
+		CalculateSections(_numberOfSections);
 		PlaceLevelSectionsOnline();
 	}
 }	

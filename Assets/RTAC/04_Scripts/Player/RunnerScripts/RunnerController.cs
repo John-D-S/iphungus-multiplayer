@@ -2,12 +2,15 @@
 
 //using Saving;
 
+using AltarChase.Networking;
+
 using Mirror;
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(NetworkIdentity))]
 public class RunnerController : NetworkBehaviour
@@ -53,6 +56,31 @@ public class RunnerController : NetworkBehaviour
 
     private Vector3 lastCheckpointPosition;
 
+    [HideInInspector] public string characterName = "blumbo";
+    
+    [Command]
+    public void CmdSetCharacterName(string _name) => RpcSetCharacterName(_name);
+
+    [ClientRpc]
+    public void RpcSetCharacterName(string _name)
+    {
+        SetCharacterName(_name);
+    }
+
+    public void SetCharacterName(string _name)
+    {
+        characterName = _name;
+    }
+
+    public void ZeroVelocity() => rigidBody.velocity = Vector3.zero;
+    
+    public override void OnStartLocalPlayer()
+    {
+        SceneManager.LoadSceneAsync("Lobby", LoadSceneMode.Additive);
+        Lobby lobby = FindObjectOfType<Lobby>();
+        CustomNetworkManager.AddPlayer(this);
+    }
+    
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Killzone"))
@@ -70,9 +98,17 @@ public class RunnerController : NetworkBehaviour
         }
     }
 
+    [Server]
     private void FinishGame()
     {
-        //nothing yet        
+        FindObjectOfType<PopUp>().RpcPopupText($"{characterName} has escaped with the artifact");
+        RpcFinishGame();
+    }
+
+    [ClientRpc]
+    public void RpcFinishGame()
+    {
+        MatchManager.instance.CallLoadMainMenu(5);
     }
     
     //reset the doublejump when making contact with an object
@@ -256,8 +292,6 @@ public class RunnerController : NetworkBehaviour
     
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         cameraGameObject = FindObjectOfType<Camera>().gameObject;
         //appearanceManager = GetComponent<AppearanceManager>();
         rigidBody = GetComponent<Rigidbody>();

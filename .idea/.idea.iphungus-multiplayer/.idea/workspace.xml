@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/EndSections/EndShortStraight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/EndSections/EndShortStraight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/StartSections/StartShortStraight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/StartSections/StartShortStraight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/TrapSections/ShortStraightHoleTrap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/TrapSections/ShortStraightHoleTrap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/CustomNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/CustomNetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/NetworkPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/NetworkPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +20,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAFB29D5-2338-47FB-B4ED-CF8D7C32B1E3/ef/8424323f/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/TempLevelTileData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Shaders/Assets/ShaderProject/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/CheckpointSection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelTile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -37,11 +49,15 @@
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/CheckpointSection.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" />
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/CustomNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ConnectionMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/LandMines/Landmine.cs" />
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/RunnerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/CustomNetworkManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PopUp.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="20hd5za2HOwGebpWtv6QDDpm5nX" />
@@ -101,7 +117,7 @@
       <workItem from="1637534657046" duration="1207000" />
       <workItem from="1637552276454" duration="3672000" />
       <workItem from="1637742069717" duration="3603000" />
-      <workItem from="1637800160949" duration="7601000" />
+      <workItem from="1637800160949" duration="18962000" />
     </task>
     <servers />
   </component>

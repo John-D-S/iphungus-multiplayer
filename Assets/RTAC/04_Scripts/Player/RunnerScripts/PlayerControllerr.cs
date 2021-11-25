@@ -85,8 +85,7 @@ public class PlayerControllerr : MonoBehaviour
         touchingGround = 0;
         groundNormal = Vector3.up;
     }
-    
-    
+
     void FixedUpdate()
     {
         if (jumpThisFrame && jumpsLeft > 0)
@@ -193,7 +192,7 @@ public class PlayerControllerr : MonoBehaviour
                 //set the position and rotation of the camera according to the current camera rotation variables.
                 RaycastHit hit = new RaycastHit();
                 Ray ray = new Ray(gameObject.transform.position + cameraLookPosition, Quaternion.Euler(-currentCameraXRotation, currentCameraYRotation, 0) * Vector3.back);
-                if(Physics.SphereCast(ray, 0.25f, out hit, cameraOffset.magnitude))
+                if(Physics.SphereCast(ray, 0.25f, out hit, cameraOffset.magnitude, ~0, QueryTriggerInteraction.Ignore))
                 {
                     cameraGameObject.transform.position = hit.point + hit.normal * 0.25f;
                 }

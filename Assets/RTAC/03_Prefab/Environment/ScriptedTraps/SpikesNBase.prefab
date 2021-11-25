@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 3957666248828164325}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,8 +290,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 859.1765, y: 1044.9344, z: 825.67834}
-  m_Center: {x: -5.332756, y: -66.15474, z: 0}
+  m_Size: {x: 859.1764, y: 990.7444, z: 825.6784}
+  m_Center: {x: -5.3327565, y: -93.24944, z: 0}
 --- !u!1 &6566540220455058833
 GameObject:
   m_ObjectHideFlags: 0

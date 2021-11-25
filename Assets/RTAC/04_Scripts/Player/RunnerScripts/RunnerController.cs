@@ -57,7 +57,7 @@ public class RunnerController : NetworkBehaviour
     {
         if(other.CompareTag("Killzone"))
         {
-            Debug.Log("shouldBeDead");
+            //Debug.Log("shouldBeDead");
             gameObject.transform.position = lastCheckpointPosition;
         }
         else if(other.CompareTag("Checkpoint"))
@@ -183,6 +183,10 @@ public class RunnerController : NetworkBehaviour
     {
         if(isLocalPlayer)
         {
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                transform.position = lastCheckpointPosition;
+            }
             if(Input.GetKeyDown(KeyCode.C))
             {
                 thirdPerson = !thirdPerson;
@@ -220,7 +224,7 @@ public class RunnerController : NetworkBehaviour
                     //set the position and rotation of the camera according to the current camera rotation variables.
                     RaycastHit hit = new RaycastHit();
                     Ray ray = new Ray(gameObject.transform.position + cameraLookPosition, Quaternion.Euler(-currentCameraXRotation, currentCameraYRotation, 0) * Vector3.back);
-                    if(Physics.SphereCast(ray, 0.25f, out hit, cameraOffset.magnitude))
+                    if(Physics.SphereCast(ray, 0.25f, out hit, cameraOffset.magnitude, ~0, QueryTriggerInteraction.Ignore))
                     {
                         cameraGameObject.transform.position = hit.point + hit.normal * 0.25f;
                     }

@@ -62,23 +62,15 @@ public class RunnerController : NetworkBehaviour
 
     [HideInInspector] public string characterName = "blumbo";
     
-    [Command]
-    public void CmdSetCharacterName(string _name) => RpcSetCharacterName(_name);
-
-    [ClientRpc]
-    public void RpcSetCharacterName(string _name)
-    {
-        SetCharacterName(_name);
-    }
-
     public void SetCharacterName(string _name)
     {
+        Debug.Log($"characterName: {characterName}");
         characterName = _name;
+        Debug.Log($"characterName: {characterName}");
     }
 
     public void ReturnToLastCheckpoint()
     {
-        Debug.Log("ReturnToLastCheckpointCalled");
         transform.position = lastCheckpointPosition;
         rigidBody.velocity = Vector3.zero;
     }
@@ -92,32 +84,39 @@ public class RunnerController : NetworkBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Killzone"))
+        if(isLocalPlayer)
         {
-            //Debug.Log("shouldBeDead");
-            ReturnToLastCheckpoint();
-        }
-        else if(other.CompareTag("Checkpoint"))
-        {
-            lastCheckpointPosition = other.transform.position;
-        }
-        else if(other.CompareTag("Finish"))
-        {
-            FinishGame();
+            if(other.CompareTag("Killzone"))
+            {
+                //Debug.Log("shouldBeDead");
+                ReturnToLastCheckpoint();
+            }
+            else if(other.CompareTag("Checkpoint"))
+            {
+                lastCheckpointPosition = other.transform.position;
+            }
+            else if(other.CompareTag("Finish") && !MatchManager.instance.matchFinished)
+            {
+                FindObjectOfType<PopUp>().CmdPopupText($"{characterName} has won the race!");
+                FinishGame();
+            }
         }
     }
 
-    [Server]
+    [Command]
     private void FinishGame()
     {
-        FindObjectOfType<PopUp>().RpcPopupText($"{characterName} has won the race!");
-        RpcFinishGame();
+        if(!MatchManager.instance.matchFinished)
+        {
+            MatchManager.instance.matchFinished = true;
+            RpcFinishGame();
+        }
     }
 
     [ClientRpc]
     public void RpcFinishGame()
     {
-        MatchManager.instance.CallLoadMainMenu(5);
+        MatchManager.instance.CmdCallLoadMainMenu(5);
     }
     
     //reset the doublejump when making contact with an object

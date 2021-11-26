@@ -10,7 +10,10 @@ using UnityEngine;
 public class PopUp : NetworkBehaviour
 {
     public TMP_Text popupText;
-    
+
+    [Command(requiresAuthority = false)]
+    public void CmdPopupText(string _text) => RpcPopupText(_text);
+
     /// <summary>
     /// Popup text to display item status to all clients.
     /// </summary>

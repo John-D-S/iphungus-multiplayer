@@ -20,8 +20,12 @@ public class Lobby : MonoBehaviour
 	private LevelGenerator levelGenerator;
 	public bool IsHost => CustomNetworkManager.Instance.IsHost;
 
+	private RunnerController player;
+	
 	private void Start()
 	{
+		player = CustomNetworkManager.LocalPlayer;
+		playerNameInputField.onValueChanged.AddListener(SetCharacterName);
 		if(!IsHost)
 		{
 			levelLengthSlider.interactable = false;
@@ -37,8 +41,7 @@ public class Lobby : MonoBehaviour
 
 	public void SetCharacterName(string _name)
 	{
-		RunnerController localPlayer = CustomNetworkManager.LocalPlayer;
-		localPlayer.CmdSetCharacterName(_name);
+		player.SetCharacterName(_name);
 	}
 
 	public void UpdateLevelLengthSliderText()
@@ -48,7 +51,6 @@ public class Lobby : MonoBehaviour
 
 	private void StartMatch()
 	{
-		SetCharacterName(playerNameInputField.text);
 		levelGenerator.RegenerateLevel(Mathf.RoundToInt(levelLengthSlider.value));
 		MatchManager.instance.StartMatch();
 		gameObject.SetActive(false);

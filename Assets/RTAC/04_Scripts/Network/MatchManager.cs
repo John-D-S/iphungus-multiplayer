@@ -16,7 +16,8 @@ public class MatchManager : NetworkBehaviour
     public static MatchManager instance = null;
 
     [SyncVar(hook  = nameof(StartMatch))] private bool matchStarted = false;
-
+    [SyncVar] public bool matchFinished = false;
+    
     public void StartMatch()
     {
         CmdStartMatch();
@@ -44,7 +45,8 @@ public class MatchManager : NetworkBehaviour
     /// Stops the Host and Server and Loads the Main Menu.
     /// </summary>
     /// <param name="_seconds">The amount of time in seconds until the main menu scene loads.</param>
-    public void CallLoadMainMenu(int _seconds) => Invoke(nameof(RpcLoadMainMenu), _seconds);
+    [Command(requiresAuthority = false)]
+    public void CmdCallLoadMainMenu(int _seconds) => Invoke(nameof(RpcLoadMainMenu), _seconds);
 
     [ClientRpc]
     public void RpcLoadMainMenu()

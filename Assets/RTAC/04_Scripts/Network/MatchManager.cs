@@ -4,21 +4,22 @@ using Mirror;
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+using Debug = UnityEngine.Debug;
 
 public class MatchManager : NetworkBehaviour
 {
     public static MatchManager instance = null;
 
-    [SyncVar(hook  = nameof(OnRecievedMatchStarted))] public bool matchStarted = false;
+    [SyncVar(hook  = nameof(StartMatch))] private bool matchStarted = false;
 
     public void StartMatch()
     {
-        if(hasAuthority)
-        {
-            CmdStartMatch();
-        }
+        CmdStartMatch();
     }
 
     [Command(requiresAuthority = false)]
@@ -27,7 +28,7 @@ public class MatchManager : NetworkBehaviour
         matchStarted = true;
     }
     
-    private void OnRecievedMatchStarted(bool _old, bool _new)
+    private void StartMatch(bool _old, bool _new)
     {
         if(_new)
         {
@@ -35,10 +36,7 @@ public class MatchManager : NetworkBehaviour
 
             SetCursorLock(true);
             RunnerController player = CustomNetworkManager.LocalPlayer;
-            Transform startPos = CustomNetworkManager.Instance.GetStartPosition();
-            player.transform.position = new Vector3(startPos.position.x, startPos.position.y + 2, startPos.position.z);
-            player.transform.rotation = startPos.rotation;
-            player.ZeroVelocity();
+            player.ReturnToLastCheckpoint();
         }
     }
 
@@ -54,7 +52,7 @@ public class MatchManager : NetworkBehaviour
         SetCursorLock(false);
         CustomNetworkManager.Instance.StopHost();
         //CustomNetworkManager.Instance.StopServer();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Offline Scene");
     }
 
     [ClientRpc]

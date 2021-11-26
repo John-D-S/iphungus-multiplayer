@@ -53,6 +53,7 @@ public class FootFall : MonoBehaviour
         yield return new WaitForSeconds(invisibleDuration);
 
         yield return FadePlate(startColours, false);
+        floor.enabled = true;
     }
 
     private void ChangeColour(bool down)

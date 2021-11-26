@@ -9,8 +9,12 @@ using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+using Debug = UnityEngine.Debug;
 
 [RequireComponent(typeof(Rigidbody), typeof(NetworkIdentity))]
 public class RunnerController : NetworkBehaviour
@@ -72,7 +76,12 @@ public class RunnerController : NetworkBehaviour
         characterName = _name;
     }
 
-    public void ZeroVelocity() => rigidBody.velocity = Vector3.zero;
+    public void ReturnToLastCheckpoint()
+    {
+        Debug.Log("ReturnToLastCheckpointCalled");
+        transform.position = lastCheckpointPosition;
+        rigidBody.velocity = Vector3.zero;
+    }
     
     public override void OnStartLocalPlayer()
     {
@@ -86,7 +95,7 @@ public class RunnerController : NetworkBehaviour
         if(other.CompareTag("Killzone"))
         {
             //Debug.Log("shouldBeDead");
-            gameObject.transform.position = lastCheckpointPosition;
+            ReturnToLastCheckpoint();
         }
         else if(other.CompareTag("Checkpoint"))
         {
@@ -101,7 +110,7 @@ public class RunnerController : NetworkBehaviour
     [Server]
     private void FinishGame()
     {
-        FindObjectOfType<PopUp>().RpcPopupText($"{characterName} has escaped with the artifact");
+        FindObjectOfType<PopUp>().RpcPopupText($"{characterName} has won the race!");
         RpcFinishGame();
     }
 
@@ -226,7 +235,7 @@ public class RunnerController : NetworkBehaviour
         {
             if(Input.GetKeyDown(KeyCode.R))
             {
-                transform.position = lastCheckpointPosition;
+                ReturnToLastCheckpoint();
             }
             if(Input.GetKeyDown(KeyCode.C))
             {

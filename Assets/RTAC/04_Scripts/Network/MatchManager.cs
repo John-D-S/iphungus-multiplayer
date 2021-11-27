@@ -13,6 +13,9 @@ using Debug = UnityEngine.Debug;
 
 public class MatchManager : NetworkBehaviour
 {
+    /// <summary>
+    /// the singleton that every script can reference
+    /// </summary>
     public static MatchManager instance = null;
 
     [SyncVar(hook  = nameof(StartMatch))] private bool matchStarted = false;

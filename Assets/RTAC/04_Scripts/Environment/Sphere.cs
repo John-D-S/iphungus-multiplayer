@@ -14,6 +14,9 @@ public class Sphere
 		radius = _radius;
 	}
 
+	/// <summary>
+	/// returns whether or not this sphere intersects with the other sphere
+	/// </summary>
 	public bool IntersectsWithSphere(Sphere other)
 	{
 		if(Vector3.Distance(position, other.position) < radius + other.radius)

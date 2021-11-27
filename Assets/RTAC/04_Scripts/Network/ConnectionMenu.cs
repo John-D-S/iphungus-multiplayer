@@ -21,21 +21,27 @@ namespace AltarChase
 		private CustomNetworkManager networkManager;
 		private KcpTransport transport;
 		
-		[SerializeField] private Button hostButton;
-		[SerializeField] private TMP_InputField inputField;
-		[SerializeField] private Button connectButton;
+		[SerializeField, Tooltip("The button that starts hosting the game.")] 
+		private Button hostButton;
+		[SerializeField, Tooltip("The input field that takes the ipv4 address")] 
+		private TMP_InputField inputField;
+		[SerializeField, Tooltip("The button that connects to the host")] 
+		private Button connectButton;
 
 		[Space] 
 		
-		[SerializeField] private DiscoveredGame discoveredGameTemplate;
-
+		[SerializeField] 
+		private DiscoveredGame discoveredGameTemplate;
+		
 		private Dictionary<IPAddress, DiscoveredGame> discoveredGames = new Dictionary<IPAddress, DiscoveredGame>();
 		
 		private void Start()
 		{
+			//initialize the network manager variable to be the singleton
 			networkManager = CustomNetworkManager.Instance;
 			transport = Transport.activeTransport as KcpTransport;
 			
+			//add listeners to the ui inputs
 			hostButton.onClick.AddListener(OnClickHost);
 			inputField.onEndEdit.AddListener(OnEndEditAddress);
 			connectButton.onClick.AddListener(OnClickConnect);

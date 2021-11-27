@@ -8,29 +8,15 @@ using UnityEngine;
 [RequireComponent(typeof(NetworkIdentity))]
 public class LevelSection : NetworkBehaviour
 {
-    [SerializeField] private List<Sphere> localSpheres = new List<Sphere>();
-    [SerializeField] private PosRot nextPosRot = new PosRot();
+    [SerializeField, Tooltip("a list of collision spheres relative to this levelsection, they should more or less encompass the section.")] 
+    private List<Sphere> localSpheres = new List<Sphere>();
+    [SerializeField, Tooltip("The end of the position")] 
+    private PosRot nextPosRot = new PosRot();
     public PosRot NextPosRot => nextPosRot;
 
-
-    /*
-    [SerializeField] private bool fixScale = false;
-    [SerializeField, HideInInspector] private bool alreadyFixed = false;
-
-    private void OnValidate()
-    {
-        if(fixScale && !alreadyFixed)
-        {
-            for(int i = 0; i < localSpheres.Count; i++)
-            {
-                localSpheres[i] = new Sphere(localSpheres[i].position * 2.5f, localSpheres[i].radius * 2.5f);
-            }
-            nextPosRot = new PosRot(nextPosRot.position * 2.5f, nextPosRot.yRot);
-            alreadyFixed = true;
-        }
-    }
-    */  
-
+    /// <summary>
+    /// returns the list of spheres when this level section is at the given posrot
+    /// </summary>
     public List<Sphere> SpheresWhenSectionAtPosRot(PosRot _posRot)
     {
         List<Sphere> returnVal = new List<Sphere>();
@@ -41,6 +27,9 @@ public class LevelSection : NetworkBehaviour
         return returnVal;
     }
     
+    /// <summary>
+    /// returns the positions of the spheres at this level sections current position in the world
+    /// </summary>
     public List<Sphere> GlobalSpheres
     {
         get

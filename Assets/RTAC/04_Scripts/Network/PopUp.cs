@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class PopUp : NetworkBehaviour
 {
+    [Tooltip("The text that pops up")]
     public TMP_Text popupText;
 
     [Command(requiresAuthority = false)]

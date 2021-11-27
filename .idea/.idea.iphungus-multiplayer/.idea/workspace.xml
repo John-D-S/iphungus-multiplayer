@@ -3,24 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="67e3f090-f7c7-4f92-8b2d-dcc605c7a906" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iphungus-multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/LevelGenTesting/ReflectionProbe-0.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Offline Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/01_Scenes/Offline Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/02_Art/Models/JohnTestPath/TestPath.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortCornerLeftCheckpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortCornerLeftCheckpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortCornerRightCheckpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortCornerRightCheckpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortStraightCheckpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/CheckpointSections/ShortStraightCheckpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/TrapSections/CurveLeftMine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/03_Prefab/Environment/JohnsLevelSecitons/TrapSections/CurveLeftMine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/EndSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/EndSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/NormalSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/NormalSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/StartSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/StartSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/TrapSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/TrapSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Sphere.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Sphere.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ColorReaderWriter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ColorReaderWriter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ConnectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ConnectionMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/NetworkPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/NetworkPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PlayerMotor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PlayerMotor.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PopUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PopUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/Cube (1).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/Cube (1).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTAC/04_Scripts/UI.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +49,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAFB29D5-2338-47FB-B4ED-CF8D7C32B1E3/ef/8424323f/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/TempLevelTileData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,25 +57,29 @@
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/CheckpointSection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelTile.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gepic-multiplayer/Assets/AltarChase/Scripts/Level Generation/LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelSection.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/CheckpointSection.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/PlayerControllerr.cs" />
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ConnectionMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/LandMines/Landmine.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/RunnerController.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/CustomNetworkManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Traps/Falling Jump Trap/FootFall.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/TrapSection.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/EndSection.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/NormalSection.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/SpecificLevelSections/StartSection.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/LevelSection.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Environment/Sphere.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/ConnectionMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/Lobby.cs" />
+      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/PopUp.cs" />
       <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Player/RunnerScripts/RunnerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/RTAC/04_Scripts/Network/MatchManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="20hd5za2HOwGebpWtv6QDDpm5nX" />
@@ -128,7 +140,9 @@
       <workItem from="1637552276454" duration="3672000" />
       <workItem from="1637742069717" duration="3603000" />
       <workItem from="1637800160949" duration="19018000" />
-      <workItem from="1637880787708" duration="17568000" />
+      <workItem from="1637880787708" duration="19180000" />
+      <workItem from="1637969862987" duration="5181000" />
+      <workItem from="1637975577759" duration="121000" />
     </task>
     <servers />
   </component>

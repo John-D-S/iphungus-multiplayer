@@ -64,9 +64,7 @@ public class RunnerController : NetworkBehaviour
     
     public void SetCharacterName(string _name)
     {
-        Debug.Log($"characterName: {characterName}");
         characterName = _name;
-        Debug.Log($"characterName: {characterName}");
     }
 
     public void ReturnToLastCheckpoint()
